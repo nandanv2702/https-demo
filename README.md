@@ -10,6 +10,19 @@ Here's all the steps I followed to create an SSL certificate for the API. Here's
 
 __IMPORTANT NOTE__: if you're prompted for a `Common Name` in _any_ of the following commands, enter __localhost__
 
+Use Node version 16.10.0
+- Check version using `node --version`
+- Switch version using `nvm use 16.10.0`
+- Install it using `nvm i 16.10.0`). This ensures TLS v1.3 is enforced (better security).
+
+All OpenSSL-related tasks will occur in a folder titled `certs` in this repo. Run the following commands to set it up:
+```bash
+mkdir certs
+cd certs
+```
+
+Let's proceed with the steps to generate a Root CA and certificate.
+
 ## Generate a Certificate Authority
 Step 1: Generate a Private Key
 
